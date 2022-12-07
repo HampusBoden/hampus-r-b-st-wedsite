@@ -27,49 +27,19 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url('skitsnygg.png');
+      background-image: url('onskelista/skitsnygg.png');
       min-height: 100%;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- Sidebar with image -->
-  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-    <div class="bgimg"></div>
-  </nav>
-
-  <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-  <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2"
-    id="mySidebar">
-    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright"
-      style="padding:0 12px;">
-      <i class="fa fa-remove"></i>
-    </a>
-    <div class="w3-bar-block w3-center">
-      <a href="#Hem" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Hem</a>
-      <a href="#portfölj" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Portfölj</a>
-      <a href="#Om" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Om</a>
-      <a href="#Kotakta" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Kontakta</a>
-    </div>
-  </nav>
-
-  <!-- Page Content -->
-  <div class="w3-main w3-padding-large" style="margin-left:40%">
-
-    <!-- Menu icon to open sidebar -->
-    <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
-
+    
     <!-- Header -->
     <header class="w3-container w3-center" style="padding:128px 16px" id="home">
       <h1 class="w3-jumbo"><b>Hampus Bodén</b></h1>
       <p>Så vad önskar sig hampus i julklapp?</p>
-      <img src="skitsnygg.png" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-      <img src="skitsnygg.png" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-      <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-      <i class="fa fa-download"></i> ladda ner önskelista på pdf
-    </button>
+      <img src="onskelista/skitsnygg.png" style="display:block; width:40%; margin:auto;">
     </header>
 
     <!-- Portfolio Section -->
@@ -80,18 +50,18 @@
       <!-- Grid for photos -->
       <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half">
-          <img src="rich-dad-poor-dad.jpeg" style="width:100%">
-          <img src="TI-nspire.jpeg" style="width:100%">
-          <img src="rosenoir.jpeg" style="width:100%">
-          <img src="boxer.avif" style="width:100%">
+          <img src="onskelista/rich-dad-poor-dad.jpeg" style="width:100%">
+          <img src="onskelista/TI-nspire.jpeg" style="width:100%">
+          <img src="onskelista/rosenoir.jpeg" style="width:100%">
+          <img src="onskelista/boxer.avif" style="width:100%">
         </div>
 
         <div class="w3-half">
-          <img src="smith-jacket.jpeg" style="width:100%">
-          <img src="traningsbyxor.webp" style="width:100%">
-          <img src="uggs.jpeg" style="width:100%">
-          <img src="t-shirt.jpeg" style="width:100%">
-          <img src="max.png" style="width:100%">
+          <img src="onskelista/smith-jacket.jpeg" style="width:100%">
+          <img src="onskelista/traningsbyxor.webp" style="width:100%">
+          <img src="onskelista/uggs.jpeg" style="width:100%">
+          <img src="onskelista/t-shirt.jpeg" style="width:100%">
+          <img src="onskelista/max.png" style="width:100%">
         </div>
         <!-- End photo grid -->
       </div>
@@ -117,15 +87,7 @@
             </font>
         </ul>
       </div>
-      <h3 class="w3-padding-16">Mina egenskaper/Min kunskap</h3>
-      <p class="w3-wide">Hemsida design</p>
-      <div class="w3-light-grey">
-        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide">Vad du önskar dig</p>
-      <div class="w3-light-grey">
-        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:20%">inget</div>
-      </div><br>
+      
       
     <!-- Contact Section -->
     <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
@@ -149,18 +111,6 @@
     </footer>
     <!-- END PAGE CONTENT -->
   </div>
-
-  <script>
-    // Open and close sidebar
-function openNav() {
-  document.getElementById("mySidebar").style.width = "60%";
-  document.getElementById("mySidebar").style.display = "block";
-}
-
-function closeNav() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-  </script>
 
 </body>
 
