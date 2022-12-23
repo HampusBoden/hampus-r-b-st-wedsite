@@ -1,14 +1,14 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Hampus Boden</title>
+  <title>Hampus Boden onskelista</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <style>
     body,
     h1,
@@ -28,7 +28,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url('bilder/skitsnygg.png');
+      background-image: src="bilder/skitsnygg.png";
       min-height: 100%;
     }
     form {
@@ -46,7 +46,7 @@
     <header class="w3-container w3-center" style="padding:128px 16px" id="home">
       <h1 class="w3-jumbo"><b>Hampus Bodén</b></h1>
       <p>Så vad önskar sig hampus i julklapp?</p>
-      <img src="bilder/skitsnygg.png" style="display:block; width:40%; margin:auto;">
+      <img src="bilder/skitsnygg.png" style="display:block; width:50%; margin:auto;">
     </header>
 
     <!-- Portfolio Section -->
@@ -94,15 +94,59 @@
             </font>
         </ul>
         <h4>Om det finns några frågor så tveka inte att skicka ett meddelande</h4>
-        <form action="https://formspree.io/f/xpzealod" method="POST">
+
+
+
+
+
+        <form id="form" id="my-form" action="https://formspree.io/f/xpzealod" method="POST">
           <label for="namn">Namn:</label><br>
           <input type="text" id="name" name="namn"><br>
+
           <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email"><br>
-          <label for="fråga">fråga:</label><br>
+          <input type="text" id="email" name="email"><br>
+
+          <label for="submit">fråga:</label><br>
           <textarea id="question" name="fråga"></textarea><br>
-          <input type="submit" value="Skicka">
+
+          <input type="submit" value="Skicka" id="button">
         </form> 
+
+        <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      ></script>
+      <script type="text/javascript">
+        emailjs.init("VN2XdmpEpIz_vpmG2");
+      </script>
+  
+      <script type="text/javascript">
+        const btn = document.getElementById("button");
+  
+        document
+          .getElementById("form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+  
+            btn.value = "Skickar...";
+  
+            const serviceID = "default_service";
+            const templateID = "template_qnspw8n";
+  
+            emailjs.sendForm(serviceID, templateID, this).then(
+              () => {
+                btn.value = "Send Email";
+                alert("skickar!");
+              },
+              (err) => {
+                btn.value = "Send Email";
+                alert(JSON.stringify(err));
+              }
+            );
+          });
+      </script>
+
+
       </div>
       
       
